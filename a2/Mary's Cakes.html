@@ -1,0 +1,121 @@
+
+<!-- saved from url=(0069)file:///C:/Users/labitaj.LABITAJX/Desktop/Anewwebsite/angel-cake.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Mary's Cakes</title>
+<link href="./Mary&#39;s Cakes_files/style.css" rel="stylesheet" type="text/css" <="" head=""> 
+<script type="text/javascript" src="./Mary&#39;s Cakes_files/jquery.min.js.download"></script>
+
+
+    
+</head><body>
+    
+    <header>
+    
+    <div class="row">
+        <div class="logo">
+            <img src="./Mary&#39;s Cakes_files/logo.png">
+        </div>
+             
+    <ul class="main-nav">
+        <li class="active"><a href="file:///C:/Users/labitaj.LABITAJX/Desktop/Anewwebsite/angel-cake.html"> HOME </a></li>
+        <li><a href="file:///C:/Users/labitaj.LABITAJX/Desktop/Anewwebsite/products.html"> PRODUCTS </a></li>
+        <li><a href="file:///C:/Users/labitaj.LABITAJX/Desktop/Anewwebsite/angel-cake.html"> ABOUT </a></li>
+        <li><a href="file:///C:/Users/labitaj.LABITAJX/Desktop/Anewwebsite/angel-cake.html"> CONTACT </a></li>  
+    </ul>
+        
+        </div>
+                      
+
+
+        
+        <h4> The Angel Cake </h4>
+    <div class="angel-main">
+         <img src="./Mary&#39;s Cakes_files/angel.jpg" alt="Angel Cake" width="450" height="450"> 
+        
+      
+        </div>
+          <h5> Our Angel cake includes the ingredients of: Sugar, flour, egg whites, cream of tartar. The rich aromas of this cake are too blissful to resist. Perfect for all occasions the Angel cake comes in small and large sizes for feeding approximately 10 and 20 people. if you're a sweet tooth, this is the one for you!
+           </h5>
+        
+        <form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php">
+            
+    <input type="hidden" id="id" name="id" value="AngelCake">
+            
+            
+            
+       <div class="input-group">
+  <input type="button" value="-" class="button-minus" data-field="qty">
+  <input type="number" step="1" max="" value="1" name="qty" class="qty-field">
+  <input type="button" value="+" class="button-plus" data-field="qty">
+</div>
+            
+ <select name="option">
+  <option value="Small">Small</option>
+  <option value="Large">Large</option>
+</select>
+            
+<input type="submit" value="Order">
+
+            
+        </form>
+        
+        
+            <div>
+            <h6> $25 </h6>
+            <h7> Price: </h7>
+            </div>
+       
+
+    
+    
+    
+    
+    
+    </header>
+    
+    
+    
+    
+    
+    <script> 
+    function incrementValue(e) {
+  e.preventDefault();
+  var fieldName = $(e.target).data('field');
+  var parent = $(e.target).closest('div');
+  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+  if (!isNaN(currentVal)) {
+    parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
+  } else {
+    parent.find('input[name=' + fieldName + ']').val(0);
+  }
+}
+
+function decrementValue(e) {
+  e.preventDefault();
+  var fieldName = $(e.target).data('field');
+  var parent = $(e.target).closest('div');
+  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+  if (!isNaN(currentVal) && currentVal > 0) {
+    parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
+  } else {
+    parent.find('input[name=' + fieldName + ']').val(0);
+  }
+}
+
+$('.input-group').on('click', '.button-plus', function(e) {
+  incrementValue(e);
+});
+
+$('.input-group').on('click', '.button-minus', function(e) {
+  decrementValue(e);
+});
+</script>
+    
+    
+    
+    
+
+    
+</body></html>

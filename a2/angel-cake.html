@@ -1,0 +1,131 @@
+<html>
+<head>
+<title>Mary's Cakes</title>
+<link href="style.css" rel="stylesheet" type="text/css"
+
+      
+      
+
+</head> 
+<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+    
+<body>
+    
+    <header>
+    
+    <div class="row">
+        <div class="logo">
+            <img src="logo.png">
+        </div>
+             
+    <ul class="main-nav">
+        <li><a href="index.html"> HOME </a></li>
+        <li class="active"><a href="products.html"> PRODUCTS </a></li>
+        <li><a href=""> ABOUT </a></li>
+        <li><a href="login.html"> LOGIN </a></li>  
+    </ul>
+        
+        </div>
+                      
+
+
+        
+        <h4> The Angel Cake </h4>
+    <div class="angel-main">
+         <img src="angel.jpg" alt="Angel Cake" width="450" height="450"> 
+        
+      
+        </div>
+          <h5> Our Angel cake includes the ingredients of: Sugar, flour, egg whites, cream of tartar. The rich aromas of this cake are too blissful to resist. Perfect for all occasions the Angel cake comes in small and large sizes for feeding approximately 10 and 20 people. if you're a sweet tooth, this is the one for you!
+           </h5>
+        
+        <form action="https://titan.csit.rmit.edu.au/~e54061/wp/processing.php">
+            
+    <input type="hidden" id="id" name="id" value="AngelCake">
+            
+             <select name="option">
+  <option value="Small">Small</option>
+  <option value="Large">Large</option>
+</select>
+            
+<input type="submit" value="Order">
+            
+            
+       <div class="input-group">
+  <input type="button" value="-" class="button-minus" data-field="qty">
+  <input type="number" step="1" max="" value="1" name="qty" class="qty-field">
+  <input type="button" value="+" class="button-plus" data-field="qty">
+</div>
+            
+<input type="hidden" name="URL" value="angel-cake.html"><br>>
+
+                
+        </form>
+        
+        
+            <div>
+            <h6> $25 </h6>
+            <h7> Price: </h7>
+            </div>
+       
+
+    
+    
+    
+    
+    
+    </header>
+    
+    
+    
+    
+    
+    <script> 
+    function incrementValue(e) {
+  e.preventDefault();
+  var fieldName = $(e.target).data('field');
+  var parent = $(e.target).closest('div');
+  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+  if (!isNaN(currentVal)) {
+    parent.find('input[name=' + fieldName + ']').val(currentVal + 1);
+  } else {
+    parent.find('input[name=' + fieldName + ']').val(1);
+  }
+}
+
+function decrementValue(e) {
+  e.preventDefault();
+  var fieldName = $(e.target).data('field');
+  var parent = $(e.target).closest('div');
+  var currentVal = parseInt(parent.find('input[name=' + fieldName + ']').val(), 10);
+
+  if (!isNaN(currentVal) && currentVal > 1) {
+    parent.find('input[name=' + fieldName + ']').val(currentVal - 1);
+  } else {
+    parent.find('input[name=' + fieldName + ']').val(1);
+  }
+}
+
+$('.input-group').on('click', '.button-plus', function(e) {
+  incrementValue(e);
+});
+
+$('.input-group').on('click', '.button-minus', function(e) {
+  decrementValue(e);
+});
+</script>
+    
+    <footer>
+  <p>© Joshua Labita 2018                    Student Number: S3720417                    By Joshua Labita</p>
+ 
+
+</footer>
+    
+    
+</body>
+    
+    
+</html>
